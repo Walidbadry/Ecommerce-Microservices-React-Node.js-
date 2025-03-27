@@ -39,6 +39,37 @@ This project is a **microservices-based e-commerce application** built with **Re
 
 ## 🛠️ Installation  
 
+📌 AWS Deployment Architecture
+🛠️ AWS Services Used:
+✅ EC2 – Hosts Jenkins for CI/CD automation.
+✅ EKS (Elastic Kubernetes Service) – Orchestrates microservices.
+✅ RDS (Relational Database Service) – Manages the database (e.g., MySQL/PostgreSQL).
+✅ ECR (Elastic Container Registry) – Stores Docker images.
+✅ S3 – Stores frontend assets and logs.
+✅ ALB (Application Load Balancer) – Manages incoming traffic.
+✅ Route 53 – Handles domain and DNS.
+✅ CloudWatch & Prometheus/Grafana – Monitors logs and performance.
+✅ IAM Roles – Manages access control.
+
+📌 Deployment Flow:
+1️⃣ Develop & Push Code → GitHub/GitLab
+2️⃣ Jenkins CI/CD on AWS EC2
+
+Pulls code
+
+Runs tests, SonarQube analysis
+
+Builds & pushes Docker images to ECR
+3️⃣ Deploy to AWS EKS
+
+Kubernetes manages microservices
+
+ALB routes traffic
+4️⃣ Monitor & Scale
+
+CloudWatch, Prometheus, Grafana track metrics
+
+Auto Scaling ensures performance
 ### **1️⃣ Clone the Repository**  
 ```sh
 git clone https://github.com/YOUR-USERNAME/Ecommerce-Microservices.git
