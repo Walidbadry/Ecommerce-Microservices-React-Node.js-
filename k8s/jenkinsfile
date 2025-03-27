@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKERHUB_USERNAME = 'your-dockerhub-username'
+        KUBE_CONFIG = credentials('k8s-config')  // Store K8s config in Jenkins
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/your-repo/ecommerce-microservices.git'
+            }
+        }
+
+        stage('Build & Push Docker Images') {
+            steps {
+                script {
+                    def services = ['product-service', 'order-service', 'user-service', 'ecommerce-frontend']
+                    services.each { service ->
+                        sh """
+                        docker build -t $DOCKERHUB_USERNAME/$service:latest ./$service
+                        docker push $DOCKERHUB_USERNAME/$service:latest
+                        """
+                    }
+                }
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                script {
+                    withKubeConfig([credentialsId: 'k8s-config']) {
+                        sh 'kubectl apply -f k8s/'
+                    }
+                }
+            }
+        }
+    }
+}
