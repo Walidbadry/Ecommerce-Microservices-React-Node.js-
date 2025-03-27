@@ -45,6 +45,17 @@ git clone https://github.com/YOUR-USERNAME/Ecommerce-Microservices.git
 cd Ecommerce-Microservices
 
 
+## 📂 Folder Structure  
+```sh
+Ecommerce-Microservices/
+│── ecommerce-frontend/  # React Frontend
+│── product-service/     # Product Microservice
+│── order-service/       # Order Microservice
+│── user-service/        # User Management Service
+│── k8s/                # Kubernetes YAML files
+│── Jenkinsfile          # Jenkins pipeline definition
+│── README.md            # Project documentation
+
 ### **🔹 DevOps & CI/CD**
 | Tool | Description |
 |------|------------|
