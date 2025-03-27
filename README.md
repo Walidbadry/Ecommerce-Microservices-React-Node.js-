@@ -43,3 +43,17 @@ This project is a **microservices-based e-commerce application** built with **Re
 ```sh
 git clone https://github.com/YOUR-USERNAME/Ecommerce-Microservices.git
 cd Ecommerce-Microservices
+
+
+### **🔹 DevOps & CI/CD**
+| Tool | Description |
+|------|------------|
+| **Jenkins** | Automates CI/CD pipelines for building, testing, and deploying services. |
+| **Docker** | Containerizes each microservice to ensure consistency across environments. |
+| **Kubernetes** | Manages and orchestrates all microservices. |
+| **Helm** | Simplifies Kubernetes deployments using Helm charts. |
+| **SonarQube** | Performs code quality and security analysis. |
+| **Trivy** | Scans Docker images for vulnerabilities. |
+| **Nexus Repository** | Acts as an artifact repository for storing built Docker images. |
+| **Prometheus & Grafana** | Monitors system performance and generates real-time dashboards. |
+
