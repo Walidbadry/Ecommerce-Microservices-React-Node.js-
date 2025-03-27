@@ -1,5 +1,5 @@
 # 🛍️ E-commerce Microservices App  
-<img src="https://raw.githubusercontent.com/Walidbadry/Ecommerce-Microservices-React-Node.js-/refs/heads/main/1%20(3).webp" alt="Description" width="1000" height = "400">
+<img src="https://raw.githubusercontent.com/Walidbadry/Ecommerce-Microservices-React-Node.js-/refs/heads/main/1%20(3).webp" alt="Description" width="1000" height = "500">
 
 This project is a **microservices-based e-commerce application** built with **React (frontend), Node.js (backend), and MongoDB**. It is containerized using **Docker** and deployed using **Kubernetes**.  
 
@@ -23,6 +23,9 @@ This project is a **microservices-based e-commerce application** built with **Re
 | **Order Service**  | 5002 | Manages order processing |
 | **Frontend**  | 3000 | React-based UI |
 | **API Gateway** | 8080 | Routes requests to microservices |
+
+## 🏗️ ERD digram
+<img src="https://raw.githubusercontent.com/Walidbadry/Ecommerce-Microservices-React-Node.js-/refs/heads/main/1%20(1).webp" alt="Description" width="1000" height = "400">
 
 ---
 
